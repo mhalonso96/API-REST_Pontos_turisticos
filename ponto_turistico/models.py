@@ -11,7 +11,7 @@ class PontoTuristico(models.Model):
     attraction = models.ManyToManyField(Atracao)
     comment = models.ManyToManyField(Comentario)
     review = models.ManyToManyField(Avaliacao)
-    placement = models.ForeignKey(Localizacao, on_delete= models.CASCADE)
+    placement = models.ForeignKey(Localizacao, on_delete= models.CASCADE, null= True, blank= True)
 
     def __str__(self):
         return self.name

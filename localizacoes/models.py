@@ -1,6 +1,6 @@
 from django.db import models
 
-class localizacao (models.Model):
+class Localizacao (models.Model):
     line1= models.CharField(max_length= 255)
     line2= models.CharField(max_length= 255, null= True, blank= True)
     city  = models.CharField(max_length= 100)

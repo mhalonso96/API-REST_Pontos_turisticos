@@ -5,3 +5,4 @@ from atracoes.models import Atracao
 class AtracaoViewSet (ModelViewSet):
     queryset = Atracao.objects.all()
     serializer_class = AtracoesSerializers
+    filter_fields = ('name', 'description')

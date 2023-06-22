@@ -16,3 +16,8 @@ git init
 git add .
 git commit -m 'Mensagem'
 git remote add origin URL_DO_GIT
+
+# Criando requeriments.txt
+
+pip install -r requirements.txt
+pip freeze > requirements.txt

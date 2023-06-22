@@ -11,8 +11,8 @@ class PontoTuristicoViewSet (ModelViewSet):
     filter_backends = (SearchFilter,)
     search_fields = ('name','placement__line1')
     #lookup_field = 'name' altera de id para nome
-    authentication_classes = (TokenAuthentication,)
-    permission_classes = (IsAuthenticated,)
+    #authentication_classes = (TokenAuthentication,)
+    #permission_classes = (IsAuthenticated,)
     
     def get_queryset(self):
         id = self.request.query_params.get('id', None)

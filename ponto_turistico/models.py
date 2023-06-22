@@ -14,5 +14,9 @@ class PontoTuristico(models.Model):
     placement = models.ForeignKey(Localizacao, on_delete= models.CASCADE, null= True, blank= True)
     photo = models.ImageField(upload_to='pontos_turisticos', null=True, blank= True)
 
+    @property
+    def full_description_2 (self):
+        return '%s ------------- %s' % (self.description, self.name)
+
     def __str__(self):
         return self.name
